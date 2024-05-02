@@ -1,0 +1,42 @@
+.masterContainer{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(20, 32, 43)
+}
+
+.leftContainer{
+    height: 100%;
+    width: 20%;
+}
+
+.middleContainer{
+    height: 100%;
+    width: 50%;
+    border: 1px solid white;
+}
+
+.middleUpContainer{
+    height: 20%;
+    width: 100%;
+    border: 1px solid white;
+}
+
+.title{
+    color: white;
+}
+
+.counter{
+    color: white;
+}
+
+.middleDownContainer{
+    height: 80%;
+    width: 100%;
+    border: 1px solid white;
+}
+
+.rightContainer{
+    height: 100%;
+    width: 30%;
+}
