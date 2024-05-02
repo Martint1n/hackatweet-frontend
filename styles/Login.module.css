@@ -1,0 +1,72 @@
+.login{
+    display: flex;
+}
+
+.containerLeft{
+    background-image: url("/background tweet.jpg");
+    background-position: center;
+    border:1px solid black;
+    display: flex;
+    height: 100vh;
+    width: 35vw;
+    
+}
+
+.containerRight{
+    background-color:#000920;
+    border: 1px solid black;
+    display: flex;
+    height: 100vh;
+    width: 75vw;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    
+}
+
+.imgback{
+    
+    height: 100vh;
+    width: 100vw;
+}
+
+.h1{
+    color:white;
+    font-size: 80px;
+    margin-left:30px;
+    margin-top: 12%;
+}
+
+.h3{
+    color:white;
+    font-size: 40px;
+    margin-left: 30px;
+}
+
+.button1{
+    height: 40px;
+    width: 200px;
+    margin-left: 30px;
+    background-color: #6A91F7;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.button2{
+    height: 40px;
+    width:  200px;
+    margin-left: 30px;
+    background-color: #00092000;
+    border-radius: 20px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.p{
+    color:white;
+    margin-left:30px;
+    font-size: 15px;
+}
