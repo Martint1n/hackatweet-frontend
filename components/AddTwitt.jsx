@@ -6,7 +6,7 @@ function AddTwitt(props) {
         if(!props.token){
             return;
         } 
-        else(props.token){
+        else{
             fetch('http://localhost:3000/users/twitt', {
                 method: POST,
                 headers: {'Content-Type': 'application/json'},
