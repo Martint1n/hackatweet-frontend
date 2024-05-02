@@ -3,7 +3,7 @@ import Login from '../components/login';
 import WindowSignin from '../components/WindowSignin';
 
 function Index() {
-  return <Login/>;
+  return <Login />;
 }
 
 export default Index;

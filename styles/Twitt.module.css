@@ -1,0 +1,18 @@
+.twitt{
+    min-height: 20vh;
+    width:50vw;
+    border: 1px solid orange;
+}
+.header{
+    display: flex;
+    border: 1px solid black;
+    align-items: center;
+}
+
+.white {
+    color: white
+}
+
+.grey{
+    color: grey
+}

@@ -7,7 +7,7 @@ function WindowSignin() {
     <div>
       <div className={styles.WindowSignin}>
         <div className={styles.infocontainer}>
-           <Image className={styles.icon} src="/logo.png" alt="logo twitter" height={50} width={50}/>
+            <Image className={styles.icon} src="/logo.png" alt="logo twitter" height={50} width={50}/>
           <h3 className={styles.h3}>Connect to Hackatweet</h3>
           <input className={styles.inputName} type="text" placeholder="Username" id="signInUsername"></input>
           <input className={styles.inputPassword}type="text" placeholder="Password" id="signInUsername"></input>
