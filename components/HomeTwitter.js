@@ -28,18 +28,23 @@ function HomeTwitter() {
         return <Hashtag key={i} {...hashtag} />
     })
 
+    const twitt = twitts.map((twitt, i) => {
+        return <Twitt key={i} {...twitt} />
+    })
+
     useEffect(() => {
         fetch('http://localhost:3000/users/twitt')
         .then(response => response.json())
         .then((data) => {
-        console.log('dataTwitts', data)
-        setTwitts(data)
+            console.log('dataTwitts', data)
+            setTwitts(data)
         })
-    }, [{}])
+    }, [])
 
-    const twitt = twitts.map((twitt, i) => {
-        return <Twitt key={i} {...twitt} />
-    })
+    const updateOnClickAddTwitt = (twitt) => {
+            setTwitts(twitt)
+        
+    }
 
     return (
         <div class={Style.masterContainer}>
@@ -50,7 +55,7 @@ function HomeTwitter() {
             <div class={Style.middleContainer}>
                 <div class={Style.middleUpContainer}>
                     <div class={Style.title}>Home</div>
-                    <AddTwitt username={username} token={token} avatar={'/avatar.jpeg'} firstname={'martin'} /> 
+                    <AddTwitt username={username} token={token} avatar={'/avatar.jpeg'} firstname={'martin'} updateOnClickAddTwitt={updateOnClickAddTwitt}/> 
                 </div>
                 <div class={Style.middleDownContainer}>
                     { twitt }

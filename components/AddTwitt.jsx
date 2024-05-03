@@ -25,6 +25,11 @@ function AddTwitt(props) {
                 body: JSON.stringify({ twitt: twitt, firstname: 'test', avatar: props.avatar})
             })
             .then(response => response.json())
+
+            .then(data => {
+                console.log(data)
+                props.updateOnClickAddTwitt(data.twitt)
+            })
         }
     }
 
