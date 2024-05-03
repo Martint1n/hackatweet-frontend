@@ -4,10 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 function Twitt(props) {
-    //props.usename, props.twitt, props.date, props.avatar, props.firstname, props.like
-
-
-
+    //props.usename, props.twitt, props.date, props.avatar, props.firstname, props.likedBy
+    
     return (
     <div class={styles.twitt}>
         <div class={styles.header}>
@@ -17,7 +15,7 @@ function Twitt(props) {
             <div class={styles.grey}>{props.date}</div>
         </div>
         <p class={styles.white}>{props.twitt}</p>
-        <FontAwesomeIcon icon={faHeart} /><span class={styles.white}>{props.like}</span>
+        <FontAwesomeIcon icon={faHeart} /><span class={styles.white}>{props.likedBy.length}</span>
     </div>
     );
 }

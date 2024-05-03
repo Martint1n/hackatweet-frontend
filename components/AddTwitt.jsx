@@ -18,7 +18,7 @@ function AddTwitt(props) {
             fetch('http://localhost:3000/users/twitt', {
                 method: POST,
                 headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({twitt: props.twitt, username: props.username})
+                body: JSON.stringify({ twitt, username: props.username})
             })
         }
     }
