@@ -15,14 +15,14 @@ function HomeTwitter() {
     const username = useSelector((state) => state.user.value.username); // add username dans store depuis la page de connexion 
     const token = useSelector((state) => state.user.value.token); 
 
-    useEffect(() => {
-        fetch('http://localhost:3000/users/hashtag')
-        .then(response => response.json())
-        .then((data) => {
-            console.log('data', data)
-            setHashtags(data);
-        })
-    }, [])
+    // useEffect(() => {
+    //     fetch('http://localhost:3000/users/hashtag')
+    //     .then(response => response.json())
+    //     .then((data) => {
+    //         console.log('data', data)
+    //         setHashtags(data);
+    //     })
+    // }, [{ hashtag }])
 
     const hashtag = hashtags.map((hashtag, i) => {
         return <Hashtag key={i} {...hashtag} />
@@ -31,8 +31,11 @@ function HomeTwitter() {
     useEffect(() => {
         fetch('http://localhost:3000/users/twitt')
         .then(response => response.json())
-        .then(data => setTwitts(data))
-    }, [{twitt}])
+        .then((data) => {
+        console.log('dataTwitts', data)
+        setTwitts(data)
+        })
+    }, [{}])
 
     const twitt = twitts.map((twitt, i) => {
         return <Twitt key={i} {...twitt} />

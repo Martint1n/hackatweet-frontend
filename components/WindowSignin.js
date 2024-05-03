@@ -1,6 +1,6 @@
 import styles from "../styles/WindowSignin.module.css";
 import {Button, Modal } from 'antd';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from "next/image"
 import Link from 'next/link';
 
@@ -21,7 +21,6 @@ function WindowSignIn() {
   const handleSubmit = () => {                     // permet d'envoyer le contenu des 3 inputs au backend
     console.log(username,password);
   
-    useEffect(() => {
     fetch('http://localhost:3000/users/signin', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },  // envoie du contenu des inputs au back via un fetch post
@@ -30,9 +29,8 @@ function WindowSignIn() {
     })
       .then(response => response.json())
       .then(data => { 
-         setData(data)                                  // on renvoie le data.result dans la variable data
+         setData({ result: data.result })                                 // on renvoie le data.result dans la variable data
         console.log(data);
-  }, []);
       
     });
   }
