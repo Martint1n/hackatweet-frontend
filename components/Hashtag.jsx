@@ -3,6 +3,8 @@ import Style from '../styles/HomeTwitter.module.css';
 
 
 function Hashtag(props) {
+
+    
     return (
         <div>
             <div class={Style.title}>{props.hashtag}</div>

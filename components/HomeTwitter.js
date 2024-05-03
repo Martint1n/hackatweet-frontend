@@ -35,7 +35,7 @@ function HomeTwitter() {
         console.log('dataTwitts', data)
         setTwitts(data)
         })
-    }, [{}])
+    }, [])
 
     const twitt = twitts.map((twitt, i) => {
         return <Twitt key={i} {...twitt} />
