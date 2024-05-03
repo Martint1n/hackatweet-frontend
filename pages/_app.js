@@ -24,10 +24,10 @@ function App({ Component, pageProps }) {
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor}>
-      <Head>
-        <title>Next.js App</title>
-      </Head>
-      <Component {...pageProps} />
+        <Head>
+          <title>Next.js App</title>
+        </Head>
+        <Component {...pageProps} />
       </PersistGate>
     </Provider>
   );

@@ -19,7 +19,7 @@ function WindowSignIn() {
   const handleSubmit = () => {                     // permet d'envoyer le contenu des 3 inputs au backend
     console.log(username,password);
 
-    fetch('http://localhost:3000/users/signup', {
+    fetch('http://localhost:3000/users/signin', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({username,password})

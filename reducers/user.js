@@ -11,7 +11,7 @@ export const userSlice = createSlice({
     name: 'user',
     initialState,
     reducers: {
-        addPreorderInfoToStore: (state, action) => {
+        addUsernameToStore: (state, action) => {
             state.value = action.payload;
         },
     }

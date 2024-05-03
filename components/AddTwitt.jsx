@@ -8,18 +8,23 @@ function AddTwitt(props) {
     const handleChange = (e) => {
         setTwitt(e.target.value);
         setTwittHeight (e.target.scrollHeight + 'px');
+        console.log('token: ', props.token)
+        console.log('username', props.username)
     }
     
     const sendTwitt = () => {
         if(!props.token){
+            console.log('token: ', props.token)
+            console.log('username', props.username)
             return;
         } 
         else{
-            fetch('http://localhost:3000/users/twitt', {
-                method: POST,
+            fetch(`http://localhost:3000/users/twitt/${props.username}`, {
+                method: 'POST',
                 headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({ twitt, username: props.username})
+                body: JSON.stringify({ twitt: twitt, firstname: 'test', avatar: props.avatar})
             })
+            .then(response => response.json())
         }
     }
 
