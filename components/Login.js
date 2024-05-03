@@ -1,6 +1,7 @@
 import styles from '../styles/Login.module.css';
 import Image from "next/image"
 import WindowSignUp from './WindowSignUp';
+import WindowSignIn from './WindowSignIn';
 
 function Login() {
   return (
@@ -9,7 +10,7 @@ function Login() {
         </div>
         <div className={styles.containerRight}>
           <div>
-            <img src="/logo.png" />
+            <img className={styles.logo} src="/logo.png" />
             </div>
             <div>
               <h1 className={styles.h1}>See what's<br/> happening</h1>
@@ -17,7 +18,7 @@ function Login() {
             </div>
             <WindowSignUp />
             <p className={styles.p}>Already have on account?</p>
-            <button  className={styles.button2}>Sign in</button>
+            <WindowSignIn />
         </div>
     </div>
   );
