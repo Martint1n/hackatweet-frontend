@@ -26,7 +26,7 @@ function WindowSignUp() {
     fetch('http://localhost:3000/users/signup', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },      // envoie du contenu des inputs au back via un fetch post
-  body: JSON.stringify({firstname,username,password})
+  body: JSON.stringify({ firstname, username, password })
 
 })
   .then(response => response.json())

@@ -9,7 +9,7 @@ import { changeToken } from '../reducers/user';          // j'importe la fonctio
 
 function WindowSignIn() {
 
-  const dispatch = useDispatch;
+  const dispatch = useDispatch();
   const [isModalOpen, setIsModalOpen] = useState(false);  // constante qui verifie si le modal est ouvert qui d'origine fermé
   const [username, setUsername] = useState('')            // mise en place d'un etat sur le input username pour capter le contenu qu'on ecrit
   const [password, setPassword] = useState('')            // mise en place d'un etat sur le input password pour capter le contenu qu'on ecrit
