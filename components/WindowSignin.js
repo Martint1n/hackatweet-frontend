@@ -12,7 +12,7 @@ function WindowSignIn() {
     console.log('ok')
     setIsModalOpen(true);
   };
-  const [data, setData] = useState({ result: false });    // constante qui premet de creer un etat d'origine a false sur le data.result
+  const [data, setData] = useState({ result: true });    // constante qui premet de creer un etat d'origine a false sur le data.result
 
   const handleCancel = () => {                            // constante qui contient une fonction qui permet de fermer le modal
     setIsModalOpen(false);
@@ -21,7 +21,7 @@ function WindowSignIn() {
   const handleSubmit = () => {                     // permet d'envoyer le contenu des 3 inputs au backend
     console.log(username,password);
   
-    useEffect(() => {
+    
     fetch('http://localhost:3000/users/signin', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },  // envoie du contenu des inputs au back via un fetch post
@@ -30,17 +30,16 @@ function WindowSignIn() {
     })
       .then(response => response.json())
       .then(data => { 
-         setData(data)                                  // on renvoie le data.result dans la variable data
+         setData({result: data.result})                                  // on renvoie le data.result dans la variable data
         console.log(data);
   }, []);
       
-    });
-  }
+   }
             // creation d'un link entourant le button qui permet de nous envoyer sur la page tweet SI le data.result est true sinon nous restons sur le modal
   return (
     <>
     <Button type="primary" onClick={showModal}>          
-        SignIn
+        SignInp
       </Button>        // ci dessous, l'effet du modal avec le style et la variable handleCancel
     <Modal title="" footer={null} bodyStyle={{'background-color': 'red', 'padding': '0px', 'margin': '0px'}} open={isModalOpen} onCancel={handleCancel} className={styles.WindowSignin}>
             <Image className={styles.icon} src="/logo.png" alt="logo twitter" height={50} width={50}/>
@@ -48,7 +47,7 @@ function WindowSignIn() {
           <input onChange={(e) => setUsername (e.target.value)} value={username} className={styles.inputName} type="text" placeholder="Username" id="signInUsername"></input>
           <input onChange={(e) => setPassword(e.target.value)} value={password} className={styles.inputPassword}type="text" placeholder="Password" id="signInPassword"></input>
           {data.result ? (
-              <link href="/HomeTwitter"/>
+              <Link href="/home" onClick={() => handleSubmit()} className={styles.buttonSignin}>Sign in</Link>
                 ) : (
                   <button onClick={() => handleSubmit()} className={styles.buttonSignin}>Sign in</button>
                 )}

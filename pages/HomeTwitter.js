@@ -5,4 +5,4 @@ function HomeTwitterPage() {
     return <HomeTwitter />;
    }
    
-   export default HomeTwitter;
+   export default HomeTwitterPage;
