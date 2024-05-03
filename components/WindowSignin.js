@@ -1,6 +1,6 @@
 import styles from "../styles/WindowSignin.module.css";
 import {Button, Modal } from 'antd';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Image from "next/image"
 import Link from 'next/link';
 
@@ -21,7 +21,7 @@ function WindowSignIn() {
   const handleSubmit = () => {                     // permet d'envoyer le contenu des 3 inputs au backend
     console.log(username,password);
   
-
+    
     fetch('http://localhost:3000/users/signin', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },  // envoie du contenu des inputs au back via un fetch post
@@ -32,8 +32,9 @@ function WindowSignIn() {
       .then(data => { 
          setData({result: data.result})                                  // on renvoie le data.result dans la variable data
         console.log(data);
+  }, []);
       
-   })
+   }
             // creation d'un link entourant le button qui permet de nous envoyer sur la page tweet SI le data.result est true sinon nous restons sur le modal
   return (
     <>
