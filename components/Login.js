@@ -1,7 +1,7 @@
 import styles from '../styles/Login.module.css';
 import Image from "next/image"
 import WindowSignUp from './WindowSignUp';
-import WindowSignIn from './WindowSignIn';
+import WindowSignIn from './WindowSignin';
 
 function Login() {
   return (
